@@ -1,3 +1,6 @@
+var advancedFormat =require('dayjs/plugin/advancedFormat');
+dayjs.extend(advancedFormat);
+dayjs().format('Q Do k kk X x');
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
