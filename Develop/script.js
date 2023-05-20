@@ -13,7 +13,11 @@ $(function () {
   // useful when saving the description in local storage?
   saveButton.on('click', function(event){
     event.preventDefault();
-    var id = $(this).closest('.time-block').attr('id');
+    var timeBlockId = $(this).closest('.time-block').attr('id');
+    var eventDescr = $(this).siblings('.description').val();
+    localStorage.setItem(timeBlockId, eventDescr);
+    
+
 
   
 
