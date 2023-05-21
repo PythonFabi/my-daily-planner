@@ -7,7 +7,7 @@ Here you can save all your events and appointments for your work day in the stan
 This project deepened my knowledge on how to apply third-party APIs to your dynamic webpage.
 Enjoy using this web app to save your important events for your workday!
 
-Here is a link to the Work Day Scheduler: (Link to Work Day Scheduler)[]
+Here is a link to the Work Day Scheduler: (Link to Work Day Scheduler)[https://pythonfabi.github.io/my-work-day-scheduler/]
 
 ## Installation
 
