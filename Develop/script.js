@@ -16,6 +16,14 @@ $(function () {
     var timeBlockId = $(this).closest('.time-block').attr('id');
     var eventDescr = $(this).siblings('.description').val();
     localStorage.setItem(timeBlockId, eventDescr);
+
+    var savedMessage = $('.saved-message');
+    savedMessage.removeAttr('display').show();
+
+    var messageDuration = setInterval(function() {
+    clearInterval(messageDuration);
+    savedMessage.hide();
+    },5000);
   });
   //
   // TODO: Add code to apply the past, present, or future class to each time
@@ -29,10 +37,10 @@ $(function () {
 
   if (timeBlockId < currentHour) {
     $(this).removeClass('future present').addClass('past');
-  } else if (id === currentHour) {
+  } else if (timeBlockId === currentHour) {
     $(this).removeClass('past future').addClass('present');
   } else {
-    $(this).removeClass('past present');addClass('future');
+    $(this).removeClass('past present').addClass('future');
   }
   });
   //
@@ -41,8 +49,8 @@ $(function () {
   // attribute of each time-block be used to do this?
   $('.time-block').each(function() {
     var timeBlockId = $(this).attr('id');
-    var description = localStorage.getItem(timeBlockId);
-    $(this).find('.description').val(description);
+    var eventDescr = localStorage.getItem(timeBlockId);
+    $(this).find('.description').val(eventDescr);
   });
 
 
