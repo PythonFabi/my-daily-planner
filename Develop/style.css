@@ -3,6 +3,26 @@ body {
   font-size: 16px;
 }
 
+.container-fluid {
+  border-top: 10px solid black;
+  margin-top: -5rem;
+}
+
+.saved-message {
+  text-align: center;
+  display: none;
+}
+
+.local-storage {
+  color: red;
+  font-family:'consolas', Courier, monospace;
+}
+
+.green-tick {
+  color: rgb(15, 207, 15);
+}
+
+
 textarea {
   background: transparent;
   border: none;
